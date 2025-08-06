@@ -148,8 +148,8 @@
                 "text": "Payment Processor "
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -246,9 +246,23 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "d1e3f819-208e-4167-98d6-20c7358f8887",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 1,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -489,13 +503,6 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -744,58 +751,14 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "67d3cbd2-dd59-49e0-9a20-69d26331e8ed",
-            "source": {
-              "x": 390,
-              "y": 330
-            },
-            "target": {
-              "cell": "8b26a8d4-6311-4c01-8c88-a0b7d0f9691d",
-              "port": "16db2960-e533-4bf2-8cd4-3c45882c527c"
-            },
-            "vertices": [
-              {
-                "x": 390,
-                "y": 440
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -908,52 +871,6 @@
             "data": {
               "type": "tm.Flow",
               "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "dad35abf-5346-4be5-ae64-9df0cec710d6",
-            "source": {
-              "x": 420,
-              "y": 510
-            },
-            "target": {
-              "cell": "2ff09035-bab6-4c2c-bf56-0aad5716f5cf",
-              "port": "eeebf54b-9217-4e10-8039-274ac8ce6d51"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
               "description": "Browsing, adding items to cart",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -977,12 +894,113 @@
               "cell": "b32ba463-4626-4291-8075-cfa5c9caad95",
               "port": "507674de-7c40-4d8e-9a79-e728b9c8056f"
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "67d3cbd2-dd59-49e0-9a20-69d26331e8ed",
+            "source": {
+              "cell": "d5db24a9-c9e0-4f54-819a-b3d15f2a5542"
+            },
+            "target": {
+              "cell": "8b26a8d4-6311-4c01-8c88-a0b7d0f9691d",
+              "port": "16db2960-e533-4bf2-8cd4-3c45882c527c"
+            },
+            "vertices": [
+              {
+                "x": 390,
+                "y": 380
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "dad35abf-5346-4be5-ae64-9df0cec710d6",
+            "source": {
+              "x": 420,
+              "y": 510
+            },
+            "target": {
+              "cell": "2ff09035-bab6-4c2c-bf56-0aad5716f5cf",
+              "port": "eeebf54b-9217-4e10-8039-274ac8ce6d51"
+            },
+            "vertices": [
+              {
+                "x": 540,
+                "y": 390
+              }
+            ]
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 2
   }
 }
