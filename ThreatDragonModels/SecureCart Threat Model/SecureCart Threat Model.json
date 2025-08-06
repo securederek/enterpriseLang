@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "d5db24a9-c9e0-4f54-819a-b3d15f2a5542",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Customer",
@@ -148,13 +148,14 @@
                 "text": "Payment Processor "
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -238,7 +239,6 @@
               ]
             },
             "id": "2ff09035-bab6-4c2c-bf56-0aad5716f5cf",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Payment Processor ",
@@ -246,23 +246,9 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": [
-                {
-                  "id": "d1e3f819-208e-4167-98d6-20c7358f8887",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Spoofing",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 1,
-                  "score": ""
-                }
-              ]
+              "threats": []
             }
           },
           {
@@ -286,6 +272,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -369,7 +356,6 @@
               ]
             },
             "id": "8b26a8d4-6311-4c01-8c88-a0b7d0f9691d",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "Web Application ",
@@ -406,6 +392,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -489,7 +476,6 @@
               ]
             },
             "id": "8595bc63-4db3-402d-9c27-caa1a1e381d9",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Authentication Service ",
@@ -529,6 +515,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -612,7 +599,6 @@
               ]
             },
             "id": "a968c39c-8122-4aae-9db5-5f7e34c5aa72",
-            "zIndex": 5,
             "data": {
               "type": "tm.Store",
               "name": "Customer Database ",
@@ -653,6 +639,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -736,7 +723,6 @@
               ]
             },
             "id": "b32ba463-4626-4291-8075-cfa5c9caad95",
-            "zIndex": 6,
             "data": {
               "type": "tm.Store",
               "name": "Order Database ",
